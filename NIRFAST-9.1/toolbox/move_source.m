@@ -95,11 +95,11 @@ for i=1:size(mesh.source.coord,1)
         pos2 = point(smallest(1),1:2) - n*scatt_dist;
         ind = mytsearchn(mesh,[pos1;pos2]);
         if ~isnan(ind(1))
-            mesh.source.coord(i,1) = pos1(1);
-            mesh.source.coord(i,2) = pos1(2);
+            %mesh.source.coord(i,1) = pos1(1);
+            %mesh.source.coord(i,2) = pos1(2);
         elseif ~isnan(ind(2))
-            mesh.source.coord(i,1) = pos2(1);
-            mesh.source.coord(i,2) = pos2(2);
+            %mesh.source.coord(i,1) = pos2(1);
+            %mesh.source.coord(i,2) = pos2(2);
         else
             failed = 1;
         end
@@ -159,3 +159,4 @@ end
 if remove_last
     mesh.source.coord(:,end) = [];
 end
+
